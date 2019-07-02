@@ -26,7 +26,7 @@ class MoleculeVAE():
     
     def create(self,
                charset,
-               max_length = 62,
+               max_length=62,
                latent_rep_size = 292,
                weights_file = None,
                qspr = False,
@@ -237,8 +237,8 @@ class MoleculeVAE():
     def save(self, filename):
         self.autoencoder.save_weights(filename)
     
-    def load(self, charset, weights_file, latent_rep_size = 292):
-        self.create(charset, weights_file = weights_file, latent_rep_size = latent_rep_size)
+    def load(self, charset, max_length, weights_file, latent_rep_size = 292, by_name = True):
+        self.create(charset, max_length, weights_file = weights_file, latent_rep_size = latent_rep_size)
 
         
 class TwoMoleculeVAE():
